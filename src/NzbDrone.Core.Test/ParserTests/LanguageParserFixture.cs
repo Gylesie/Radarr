@@ -343,7 +343,6 @@ namespace NzbDrone.Core.Test.ParserTests
 
         [TestCase("Movie.Title.1994.HDTV.x264.SK-iCZi")]
         [TestCase("Movie.Title.2019.1080p.HDTV.x265.iNTERNAL.SK-iCZi")]
-        [TestCase("Series.Title.S01E07.HDTV.x264.SK-iCZi")]
         [TestCase("Movie.Title.2018.SLOVAK.DUAL.2160p.UHD.BluRay.x265-iCZi")]
         [TestCase("Movie.Title.1990.SLOVAK.HDTV.x264-iCZi")]
         public void should_parse_language_slovak(string postTitle)
