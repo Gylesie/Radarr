@@ -179,6 +179,11 @@ namespace NzbDrone.Core.Parser
                 languages.Add(Language.Bengali);
             }
 
+            if (lowerTitle.Contains("slovak"))
+            {
+                languages.Add(Language.Slovak);
+            }
+
             // Case sensitive
             var caseSensitiveMatch = CaseSensitiveLanguageRegex.Match(title);
 
