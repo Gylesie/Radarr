@@ -341,6 +341,15 @@ namespace NzbDrone.Core.Test.ParserTests
             result.Languages.Should().BeEquivalentTo(Language.Bengali);
         }
 
+        [TestCase("Movie.Title.1994.HDTV.x264.SK-iCZi")]
+        [TestCase("Movie.Title.2019.1080p.HDTV.x265.iNTERNAL.SK-iCZi ")]
+        [TestCase("Series.Title.S01E07.HDTV.x264.SK-iCZi ")]
+        public void should_parse_language_slovak(string postTitle)
+        {
+            var result = Parser.Parser.ParseMovieTitle(postTitle);
+            result.Languages.Should().BeEquivalentTo(Language.Slovak);
+        }
+
         [TestCase("Movie.Title.en.sub")]
         [TestCase("Movie Title.eng.sub")]
         [TestCase("Movie.Title.eng.forced.sub")]
